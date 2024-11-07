@@ -9,15 +9,22 @@ const Cards = () => {
     const {category} = useParams();
     const [gadgets, setGadgets ] = useState([])
     useEffect(()=>{
+        if(category){
+
         const gadgetsCategoryWise =[...cards].filter(
             gadget => gadget.category === category
         )
         setGadgets(gadgetsCategoryWise)
+    }
+    else{
+        setGadgets(cards)
+    }
+
 
     },[category,cards])
-    
+
     return (
-        <div className='grid grid-cols-3'>
+        <div className='grid grid-cols-3 gap-4 '>
            {
             gadgets.map(gadget => <Card key={gadget.id} gadget={gadget}></Card>
 
@@ -28,3 +35,6 @@ const Cards = () => {
 };
 
 export default Cards;
+
+
+

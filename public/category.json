@@ -1,6 +1,6 @@
 [
     {
-      "category": "Iphone",
+      "category": "Phones",
       "product_id": "1"
     },
     {
@@ -8,8 +8,9 @@
       "product_id": "2"
     },
     {
-      "category": "Smart watches",
+      "category": "Watches",
       "product_id": "3"
     }
+   
   ]
   

@@ -1,14 +1,14 @@
 
 
 const Card = ({gadget}) => {
-    const {product_title,product_image,price}= gadget
+    const {product_title,product_image,price}= gadget;
     return (
-        <div>
-              <div className="border border-gray-300 rounded-lg p-4 shadow-lg max-w-xs text-center">
-                 <img src={product_image} alt="Product" className="w-full h-auto rounded-lg mb-4" /> 
-                 <h2 className="text-xl font-semibold mb-2">{product_title}</h2> 
-                 <p className="text-gray-700 mb-4">{price}</p>
-                  <button className="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">View Details</button>
+        <div >
+              <div className="border border-gray-300 rounded-lg p-4 shadow-lg   bg-gray-200 mt-4 flex flex-col items-start gap-6">
+                 <img src={product_image} alt="Product" className="w-full h-[300px] rounded-xl  " /> 
+                 <h2 className="text-xl text-left font-bold ">{product_title}</h2> 
+                 <p className="text-gray-700 text-left text-lg font-medium">Price: ${price}</p>
+                  <button className="border-purple-700 border font-semibold  text-purple-800 px-4 py-2 rounded-3xl  text-left transition-transform duration-300 hover:scale-105 hover:bg-gray-300">View Details</button>
                 </div>
         </div>
     );
